@@ -4,6 +4,7 @@ https://www.javainuse.com/devOps/docker/docker-commands-cheat-sheet
 docker version
 docker info
 docker images
+docker search <name>   --> This example displays images with a name containing 'name'
 docker pull <imageName>
 docker run <imageName>
 docker run -it <imageName>    --> running image on interactive terminal Mode
