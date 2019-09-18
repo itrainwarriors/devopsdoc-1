@@ -16,6 +16,9 @@ docker rm $(docker ps -aq)    --> deleting all container by IDs
 docker rmi -f <imageID >      --> forced removal of one image
 docker rmi -f $(docker images -aq) --> remove all the images exist in the system.
 
+How to go inside the container:
+docker exec -it <container ID> /bin/bash
+
 All the dangling images with no tags can be viewes through below command
  docker images --filter "dangling=true"
 
