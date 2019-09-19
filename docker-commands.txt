@@ -5,6 +5,7 @@ docker version
 docker info
 docker images
 docker search <name>   --> This example displays images with a name containing 'name'
+curl -s -S 'https://registry.hub.docker.com/v2/repositories/library/image/tags/' | jq '."results"[]["name"]' |sort  --> finding tegs of image
 docker pull <imageName>
 docker run <imageName>
 docker run -it <imageName>    --> running image on interactive terminal Mode
