@@ -1,0 +1,116 @@
+ Container Orchestration Engine(COE)
+1. K8s
+2.Docker Swarm
+3.Apache Mesos/Marathon.
+
+Kubernetes was initially developed by Google, later it handed over to CNCF
+CKAD
+CKA
+
+Kubernetes(K8S)
+	Deployment
+	High Availability
+	Autoscaling
+	Networking and security
+	Storage
+
+K8S Architecture:
+  Master-Node( control plane)
+  Worker-node( Agents or slaves)-any number of slaves or agents
+
+Node- Minions
+Master as control plan:
+  API Server
+  Scheduler
+  Controller
+  ETCD
+  Container Runtime
+
+Node(slaves or minions)
+ Kubelet
+ Container Runtime
+ Proxy
+
+Load Balancer:
+F5
+Route53
+
+Service
+  IPV4-1
+  IPV4-2
+  IPV4-3
+  IPV4-4
+
+Kubernetes resources:(Kind)
+ Namespace
+ Deployment
+ Pod
+ Service
+ ReplicationController
+ ConfigMap
+ PersistantVolumeClaim
+ PersistantVolume
+ Secrets
+
+K8S:
+
+Agenda for today:
+
+  Based on our discussion earlier.
+
+Deployments, Pods, services and replicasets need to be created under a Namespace.
+
+1. Create Namespace
+2. Create context and set the context to point the namespace created.
+3. Do deployment of application services under this namespace.
+
+CLI for K8s - Kubectl
+
+Through Kubectl we can do deployments and manage configuration through two formats:
+
+  1. Imperative commands ( Kubectl commands to deploy-
+  2. Declarative commands ( Define your deployment or pods in a YAML)
+
+Kubernetes context:
+  Context manages namespace, users(permission) and cluster information in a isolated form.
+
+namespace: itrainjaguar
+
+Kubernetes resources(components)
+
+Namespace
+Deployment
+Replicaset
+Pods
+Services
+PersistentVolume
+PersistentVolumeClaim
+Secrets
+ConfigMap
+ServiceAccount
+NetworkPolicy
+
+Above resources can be created in declarative format(Yaml):
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-master-deployment
+  namespace: itrainjaguar
+  labels:
+    app: redis
+    role: master
+
+spec:
+  replicas:
+  selector:
+
+  template:
+
+
+
+
+
+  
+
+
