@@ -1,0 +1,63 @@
+1  minikube <command>
+    2  minikube version
+    3  kubectl version
+    4  kubectl get namespace
+    5  kubectl get namespace -o wide
+    6  kubectl get namespace -o yaml
+    7  kubectl config view
+    8  kubectl create ns itrain-project
+    9  kubectl get ns
+   10  kubectl config set-context itrain-project --cluster=minikube --user=minikube --namespace=itrain-project
+   11  kubectl config view
+   12  kubectl config use-context itrain-project
+   13  kubectl config current-context
+   14  kubectl config user-context minikube
+   15  kubectl config use-context minikube
+   16  kubectl config current-context
+   17  kubectl delete ns itrain-project
+   18  kubectl config view
+   19  kubectl get ns
+   20  kubectl create -f https://raw.githubusercontent.com/itrainpulsars/k8s_deployments/master/namespace.yaml
+   21  kubectl get ns
+   22  kubectl config view
+   23  kubectl config use-context itrain-project
+   24  kubectl get deployments
+   25  kubectl get pods
+   26  kubectl config use-context minikube
+   27  kubectl get ns
+   28  kubectl get deployments -n kube-system
+   29  kubectl get pods -n kube-system
+   30  kubectl get pods -n kube-public
+   31  kubectl get pods -n itrain-project
+   32  kubectl config current-context
+   33  kubectl config use-context itrain-project
+   34  kubectl config current-context
+   35  kubectl create -f https://raw.githubusercontent.com/itrainpadman/k8s_resouces/master/jenkins-deployments.yml
+   36  kubectl get deployment
+   37  ls
+   38  git clone https://github.com/itrainpulsars/k8s_deployments.git
+   39  ls
+   40  cd k8s_deployments/
+   41  ls
+   42  docker built -t hello-world .
+   43  docker build -t hello-world .
+   44  docker images
+   45  kubectl create deployment hello-world-deploy --image=hello-world
+   46  kubectl get deployment -n itrain-project
+   47  kubectl get deployment
+   48  kubectl get pods
+   49  kubectl delete deploy hello-world-deploy
+   50  kubectl get deployments
+   51  kubectl get pods
+   52  kubectl get rs
+   53  kubectl get all -l app=hello-world-deploy
+   54  clear
+   55  kubectl create deployment pyapp --image=manee2k6/pulsar-pyapp
+   56  kubectl get deployments
+   57  kubectl get pods
+   58  kubectl get deploy
+   59  kubectl get pods
+   60  kubectl get rs
+   61  kubectl get services
+   62  kubectl get deploy -o wide
+   63  minikube dashboard
